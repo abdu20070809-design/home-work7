@@ -23,6 +23,9 @@ function countScore(targetScore) {
 
 console.log(countScore(5));
 
+
+
+
 function creatCounter() {
     let count = 0;
     return function(){
@@ -39,7 +42,6 @@ console.log(counter());
 function checkScores(arr) {
   let countFives = 0;
 
-  // Перебираем и выводим каждую оценку, а также считаем пятёрки
   arr.forEach(function(score) {
     console.log("Оценка: " + score);
     if (score === 5) {
@@ -47,17 +49,14 @@ function checkScores(arr) {
     }
   });
 
-  // Находим индексы первой и последней пятёрки
   const firstFive = arr.indexOf(5);
   const lastFive = arr.lastIndexOf(5);
 
-  // Выводим финальные результаты
   console.log("Всего пятёрок: " + countFives);
   console.log("Первая пятёрка: " + firstFive);
   console.log("Последняя пятёрка: " + lastFive);
 }
 
-// Запускаем функцию
 checkScores(scores);
 
 
